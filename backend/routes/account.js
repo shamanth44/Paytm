@@ -1,4 +1,6 @@
 const express = require("express");
+const app = express();
+const cors = require("cors");
 const { authMiddleware } = require("../middleware");
 const { Account, User } = require("../db");
 const { default: mongoose } = require('mongoose');
