@@ -9,7 +9,7 @@ export const Appbar = () => {
 
 
     async function fetchUserDetails(){
-        await axios.get("http://localhost:3000/api/v1/account/singleuser", {
+        await axios.get("http://paytm-v1yc.onrender.com/api/v1/account/singleuser", {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("token"),
             },
