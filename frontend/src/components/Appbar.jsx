@@ -21,15 +21,20 @@ export const Appbar = () => {
     }
 
     useEffect(()=>{
+       setTimeout(() => {
         fetchUserDetails();
+       }, 0);
     }, []);
 
 
     // console.log(user)
     // console.log(user.firstName[0])
-    
+    if(!firstName && !firstLetter){
+        return <><div>Loading...</div></>
+    } else{
 
-    return <div className="shadow h-14 flex justify-between">
+        
+        return <div className="shadow h-14 flex justify-between">
         <div className="flex flex-col justify-center h-full ml-4">
             PayTM App
         </div>
@@ -51,16 +56,17 @@ export const Appbar = () => {
             onClick={ ()=>{
                 localStorage.removeItem("token", {})
                 navigate("/signin")
-
+                
             }}
-
-
-          type="button"
-          className=" text-white bg-gray-800 hover:bg-gray-900 focus:outline-none mt-1  focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
-        >
+            
+            
+            type="button"
+            className=" text-white bg-gray-800 hover:bg-gray-900 focus:outline-none mt-1  focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
+            >
           Signout
         </button>
             
         </div>
     </div>
+        }
 }
