@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-
+MONGO_URI = "mongodb+srv://shamanthganiger:clvKtsD6TyNEyggq@cluster0.iq2umsi.mongodb.net/paytm"
 mongoose.connect(
-  "mongodb+srv://shamanthganiger:clvKtsD6TyNEyggq@cluster0.iq2umsi.mongodb.net/paytm"
+  MONGO_URI
 );
 
 const userSchema = new mongoose.Schema({
