@@ -11,7 +11,7 @@ export const Users = () => {
 
 
     async function bulkCall () {
-    await axios.get("http://localhost:3000/api/v1/user/bulk?filter=" + filter,  {
+    await axios.get("https://paytm-v1yc.onrender.com/api/v1/user/bulk?filter=" + filter,  {
         headers: {
           Authorization:
             "Bearer " + localStorage.getItem("token"),
