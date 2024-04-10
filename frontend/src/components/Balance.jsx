@@ -6,7 +6,7 @@ export const Balance = () => {
 
   async function balanceCall() {
     await axios
-      .get("http://localhost:3000/api/v1/account/balance", {
+      .get("http://paytm-v1yc.onrender.com/api/v1/account/balance", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
