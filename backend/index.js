@@ -11,9 +11,6 @@ app.use("/api/v1", mainRouter ); // /api/v1/user/signup, /api/v1/user/signin, /a
                                  // /api/v1/account/balance, /api/v1/transfer
 
 
-app.listen(3000, (req, res)=>{
-    res.json({
-        message: "Server Started"
-    })
+app.listen(3000, ()=>{
     console.log("server running on port 3000")
 });
